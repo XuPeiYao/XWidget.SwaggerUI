@@ -12,11 +12,53 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>G:\XWidget.SwaggerUI\XWidget.SwaggerUI\XWidget.SwaggerUI.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\netstandard2.0\XWidget.SwaggerUI.xml</DocumentationFile>
+    <OutputPath>bin\Debug\netstandard2.0\</OutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>G:\XWidget.SwaggerUI\XWidget.SwaggerUI\XWidget.SwaggerUI.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netstandard2.0\XWidget.SwaggerUI.xml</DocumentationFile>
+    <OutputPath>bin\Release\netstandard2.0\</OutputPath>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ResourceFiles\ClientExport.html" />
+    <None Remove="SwaggerUI_Files\favicon-16x16.png" />
+    <None Remove="SwaggerUI_Files\favicon-32x32.png" />
+    <None Remove="SwaggerUI_Files\index.html" />
+    <None Remove="SwaggerUI_Files\oauth2-redirect.html" />
+    <None Remove="SwaggerUI_Files\swagger-ui-bundle.js" />
+    <None Remove="SwaggerUI_Files\swagger-ui-bundle.js.map" />
+    <None Remove="SwaggerUI_Files\swagger-ui-standalone-preset.js" />
+    <None Remove="SwaggerUI_Files\swagger-ui-standalone-preset.js.map" />
+    <None Remove="SwaggerUI_Files\swagger-ui.css" />
+    <None Remove="SwaggerUI_Files\swagger-ui.css.map" />
+    <None Remove="SwaggerUI_Files\swagger-ui.js" />
+    <None Remove="SwaggerUI_Files\swagger-ui.js.map" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="ResourceFiles\ClientExport.html" />
+    <EmbeddedResource Include="SwaggerUI_Files\favicon-16x16.png" />
+    <EmbeddedResource Include="SwaggerUI_Files\favicon-32x32.png" />
+    <EmbeddedResource Include="SwaggerUI_Files\index.html" />
+    <EmbeddedResource Include="SwaggerUI_Files\oauth2-redirect.html" />
+    <EmbeddedResource Include="SwaggerUI_Files\swagger-ui-bundle.js" />
+    <EmbeddedResource Include="SwaggerUI_Files\swagger-ui-bundle.js.map" />
+    <EmbeddedResource Include="SwaggerUI_Files\swagger-ui-standalone-preset.js" />
+    <EmbeddedResource Include="SwaggerUI_Files\swagger-ui-standalone-preset.js.map" />
+    <EmbeddedResource Include="SwaggerUI_Files\swagger-ui.css" />
+    <EmbeddedResource Include="SwaggerUI_Files\swagger-ui.css.map" />
+    <EmbeddedResource Include="SwaggerUI_Files\swagger-ui.js" />
+    <EmbeddedResource Include="SwaggerUI_Files\swagger-ui.js.map" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.1.0" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Physical" Version="2.1.0" />
+    <PackageReference Include="XWidget.Extensions" Version="1.7.4" />
+    <PackageReference Include="XWidget.Web" Version="1.7.4" />
+  </ItemGroup>
 
 </Project>

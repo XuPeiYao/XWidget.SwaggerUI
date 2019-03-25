@@ -7,8 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XWidget.SwaggerUI", "XWidge
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{55607905-CFC7-4DF2-8B4E-6A9D241F7996}"
 	ProjectSection(SolutionItems) = preProject
-		..\XWidget\build.sh = ..\XWidget\build.sh
-		..\XWidget\LICENSE = ..\XWidget\LICENSE
+		build.sh = build.sh
+		LICENSE = LICENSE
 		version = version
 	EndProjectSection
 EndProject

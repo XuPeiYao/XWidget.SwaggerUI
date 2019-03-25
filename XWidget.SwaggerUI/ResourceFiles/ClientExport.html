@@ -1,0 +1,76 @@
+﻿<div class="swagger-ui " style="
+    width:100%;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    background: #ededed; ">
+    <div class="wrapper">
+        <section class="block col-12 block-desktop col-12-desktop" style="padding:20px;">
+            <h4>Generate Client</h4>
+            <label>Select language: </label>
+            <select id="generateLang">
+                <option value="ada">ada</option>
+                <option value="akka-scala">akka-scala</option>
+                <option value="android">android</option>
+                <option value="apex">apex</option>
+                <option value="bash">bash</option>
+                <option value="clojure">clojure</option>
+                <option value="cpprest">cpprest</option>
+                <option value="csharp">csharp</option>
+                <option value="csharp-dotnet2">csharp-dotnet2</option>
+                <option value="cwiki">cwiki</option>
+                <option value="dart">dart</option>
+                <option value="dart-jaguar">dart-jaguar</option>
+                <option value="dynamic-html">dynamic-html</option>
+                <option value="eiffel">eiffel</option>
+                <option value="elixir">elixir</option>
+                <option value="elm">elm</option>
+                <option value="erlang-client">erlang-client</option>
+                <option value="flash">flash</option>
+                <option value="go">go</option>
+                <option value="groovy">groovy</option>
+                <option value="haskell-http-client">haskell-http-client</option>
+                <option value="html">html</option>
+                <option value="html2">html2</option>
+                <option value="java">java</option>
+                <option value="javascript">javascript</option>
+                <option value="javascript-closure-angular">javascript-closure-angular</option>
+                <option value="jaxrs-cxf-client">jaxrs-cxf-client</option>
+                <option value="jmeter">jmeter</option>
+                <option value="kotlin">kotlin</option>
+                <option value="lua">lua</option>
+                <option value="objc">objc</option>
+                <option value="perl">perl</option>
+                <option value="php">php</option>
+                <option value="powershell">powershell</option>
+                <option value="python">python</option>
+                <option value="qt5cpp">qt5cpp</option>
+                <option value="r">r</option>
+                <option value="ruby">ruby</option>
+                <option value="rust">rust</option>
+                <option value="scala">scala</option>
+                <option value="scala-gatling">scala-gatling</option>
+                <option value="scalaz">scalaz</option>
+                <option value="swagger">swagger</option>
+                <option value="swagger-yaml">swagger-yaml</option>
+                <option value="swift">swift</option>
+                <option value="swift3">swift3</option>
+                <option value="swift4">swift4</option>
+                <option value="tizen">tizen</option>
+                <option value="typescript-angular">typescript-angular</option>
+                <option value="typescript-angularjs">typescript-angularjs</option>
+                <option value="typescript-aurelia">typescript-aurelia</option>
+                <option value="typescript-fetch">typescript-fetch</option>
+                <option value="typescript-inversify">typescript-inversify</option>
+                <option value="typescript-jquery">typescript-jquery</option>
+                <option value="typescript-node">typescript-node</option>
+            </select>
+            <button class="btn try-out__btn" onclick="generateClient()">Generate</button>
+        </section>
+    </div>
+</div>
+<script>
+    function generateClient() {
+        var lang = document.getElementById('generateLang').value;
+        window.open(swaggerPath + '/export/' + lang + '?path=' + encodeURIComponent(swaggerUrl));
+    }
+</script>

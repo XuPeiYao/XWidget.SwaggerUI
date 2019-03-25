@@ -5,6 +5,10 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>SwaggerUI</Description>
     <Copyright>MIT</Copyright>
+    <PackageProjectUrl>https://github.com/XuPeiYao/XWidget.SwaggerUI</PackageProjectUrl>
+    <PackageIconUrl>https://i.imgur.com/fF6aNHL.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/XuPeiYao/XWidget.SwaggerUI</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

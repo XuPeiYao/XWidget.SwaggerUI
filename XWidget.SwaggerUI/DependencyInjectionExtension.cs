@@ -45,14 +45,13 @@ namespace XWidget.SwaggerUI {
             }).Map(path, app2 => {
                 app2.UseHtmlHandler(async (context, html) => {
                     var jsonPath = swaggerJsonPath;
-                    if (!swaggerJsonPath.StartsWith("http://", StringComparison.CurrentCultureIgnoreCase) &&
-                        !swaggerJsonPath.StartsWith("https://", StringComparison.CurrentCultureIgnoreCase)) {
-                        jsonPath = $"{context.Request.Scheme}://{context.Request.Host}" + swaggerJsonPath;
-                    }
 
                     HtmlDocument doc = new HtmlDocument();
                     doc.LoadHtml(html);
                     var body = doc.DocumentNode.SelectSingleNode("//body");
+
+                    if (body == null) return html;
+
                     var script = doc.CreateElement("script");
                     script.InnerHtml = "var swaggerUrl = '" + jsonPath + "';var swaggerPath = '" + path.Value + "';";
 

@@ -55,6 +55,10 @@ namespace XWidget.SwaggerUI {
                     var body = doc.DocumentNode.SelectSingleNode("//body");
                     var script = doc.CreateElement("script");
                     script.InnerHtml = "var swaggerUrl = '" + jsonPath + "';var swaggerPath = '" + path.Value + "';";
+
+                    if (body == null) {
+
+                    }
                     body.AppendChild(script);
 
                     if (generateClient) {
@@ -69,7 +73,7 @@ namespace XWidget.SwaggerUI {
 
                 app2.Use(async (context, next) => {
                     await next();
-                    if (context.Response.StatusCode == 404) {
+                    if (context.Response.StatusCode != 200) {
                         context.Response.Redirect(path + "/index.html");
                     }
                 });

@@ -70,7 +70,13 @@
 </div>
 <script>
     function generateClient() {
+        var jsonPath = swaggerUrl;
+        if (jsonPath.toLowerCase().indexOf("http://") == -1 &&
+            jsonPath.toLowerCase().indexOf("https://") == -1) {
+            jsonPath = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port : '') + jsonPath
+        }
+
         var lang = document.getElementById('generateLang').value;
-        window.open(swaggerPath + '/export/' + lang + '?path=' + encodeURIComponent(swaggerUrl));
+        window.open(swaggerPath + '/export/' + lang + '?path=' + encodeURIComponent(jsonPath));
     }
 </script>

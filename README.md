@@ -1,4 +1,19 @@
 XWidget.SwaggerUI
 =====
 
-SwaggerUI for .NET Core
+Newer Swagger UI for .NET Core
+
+## Getting Started
+
+1.Install NuGet package.
+```shell
+Install-Package XWidget.SwaggerUI
+```
+
+2.Add SwaggerUI middleware in your `Startup.Configure` method.
+```
+app.UseSwagger(); // your swagger document generator
+app.UseSwaggerUI("/swagger", "/swagger/v1/swagger.json"); // add this line
+```
+
+3.Run project and browse 'http://localhost:5000/swagger'

@@ -11,7 +11,7 @@ Install-Package XWidget.SwaggerUI
 ```
 
 #### 2.Add SwaggerUI middleware in your `Startup.Configure` method.
-```
+```csharp
 app.UseSwagger(); // your swagger document generator
 app.UseSwaggerUI("/swagger", "/swagger/v1/swagger.json"); // add this line
 ```

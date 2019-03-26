@@ -56,9 +56,6 @@ namespace XWidget.SwaggerUI {
                     var script = doc.CreateElement("script");
                     script.InnerHtml = "var swaggerUrl = '" + jsonPath + "';var swaggerPath = '" + path.Value + "';";
 
-                    if (body == null) {
-
-                    }
                     body.AppendChild(script);
 
                     if (generateClient) {
